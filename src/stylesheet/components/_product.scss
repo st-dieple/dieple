@@ -1,0 +1,67 @@
+.product-list {
+  @include pxRem(padding-top, 60);
+  @include pxRem(padding-bottom, 60);
+  text-align: center;
+
+  .product-list-inner {
+    @include pxRem(margin, 0 -25);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .product-list-item {
+    @include pxRem(padding, 0 25);
+    display: inline-block;
+    width: 25%;
+  }
+}
+
+.product-miniature {
+  @include pxRem(padding-bottom, 50);
+  text-align: center;
+  &:hover {
+    .product-inner {
+      border: 2px solid map-get($color, green);
+      .product-action {
+        opacity: 1;
+        transform: translate(-50%, 0);
+      }
+    }
+  }
+  .product-text-wrapper {
+    @include pxRem(margin, 22 0 12);
+    font-size: map-get($font-size, md);
+  }
+  .product-name {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .product-rate {
+    color:map-get($color, grey-a);
+    .checked {
+      color: map-get($color, yellow);
+    }
+  }
+  .product-price {
+    font-family: $font-family-secondary;
+    color: map-get($color, content-text);
+    .txt-highlight {
+      padding-left: 5px;
+    }
+  }
+  .product-inner {
+    position: relative;
+    line-height: 0;
+    overflow: hidden;
+    border: 2px solid map-get($color, border);
+    border-radius: 5px;
+    .product-action {
+      opacity: 0;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 100%);
+      transition: all .2s ease-out;
+    }
+  }
+}

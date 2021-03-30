@@ -1,0 +1,40 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantity {
+  // @include pxRem(font-size, map-get($font-size,lg));
+  display: inline-block;
+  width: auto;
+  border: solid 1px map-get($color, border);
+  line-height: 1;
+  input[type=number] {
+    @include pxRem(font-size, map-get($font-size,md));
+    height: 100%;
+    width: 50px;
+    padding: 0 15px;
+    border: none;
+    text-align: center;
+    font-weight: 500;
+  }
+  span {
+    @include pxRem(font-size, map-get($font-size, sm));
+    display: inline-block;
+    padding: 12px 12px 10px;
+    &.qty-decrease {
+      border-right: solid 1px map-get($color, border);
+    }
+    &.qty-increase {
+      border-left: solid 1px map-get($color, border);
+    }
+    &:hover {
+      cursor: pointer;
+      background-color: map-get($color, bg-gray);
+    }
+    .fa {
+      color: map-get($color, content-text);
+    }
+  }
+}

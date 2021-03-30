@@ -1,0 +1,26 @@
+.page-banner {
+  @include pxRem(height, 540);
+  @include pxRem(margin-bottom, 100);
+  @include pxRem(font-size, map-get($font-size, lg));
+  overflow: hidden;
+  color: map-get($color, content-text);
+  .page-banner-inner {
+    display: flex;
+    justify-content: space-around;
+    background-color: map-get($color, primary);
+  }
+  .banner-item-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .banner-item-right {
+    width: 420px;
+    height: 630px;
+  }
+  .caption {
+    @include pxRem(font-size, map-get($font-size, xl));
+    color: map-get($color, black);
+    font-weight: 600;
+  }
+}
