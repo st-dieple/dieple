@@ -1,0 +1,49 @@
+.cart {
+  @include pxRem(padding-top, 60);
+  @include pxRem(padding-bottom, 60);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  .grid-left {
+    width: 65%;
+  }
+  .grid-right {
+    width: 30%;
+  }
+  .title {
+    @include pxRem(font-size, map-get($font-size, xl));
+    @include pxRem(margin-bottom, 20);
+    font-weight: 600;
+  }
+  .product-price {
+    font-family: $font-family-secondary;
+    span {
+      padding-right: 8px;
+    }
+  }
+  p {
+    margin-bottom: 15px;
+  }
+}
+.cart-item {
+  @include pxRem(font-size, map-get($font-size, lg));
+  @include pxRem(padding, 20 0);
+  border-bottom: solid 1px map-get($color, border);
+  .product-image {
+    width: 125px;
+  }
+}
+.cart-summary {
+  @include pxRem(font-size, map-get($font-size, lg));
+  @include pxRem(margin-top, 40);
+  border: 1px solid map-get($color, border);
+  .summary-item {
+    @include pxRem(padding, 20);
+    display: flex;
+    justify-content: space-between;
+  }
+  .value {
+    font-family: $font-family-secondary;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,76 @@
+.page-header {
+  @include pxRem(height, 96);
+  @include pxRem(font-size, map-get($font-size, sm));
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  font-weight: 700;
+  background: map-get($color, white);
+  &::after {
+    @include pxRem(height, 96);
+    content: '';
+  }
+  .container {
+    height: 100%;
+    position: relative;
+  }
+  .page-header-inner,
+  .header-item-left,
+  .header-item-right {
+    @extend %flex-between;
+  }
+  .header-item-left,
+  .header-item-right {
+    height: 100%;
+    z-index: 2;
+  }
+  .header-item-center {
+    @extend %flex-center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+  }
+  .nav-menu {
+    .nav-menu-item {
+      @include pxRem(padding, 0 22);
+      color: map-get($color, black);
+      &:hover {
+        a {
+          color: map-get($color, green);
+        }
+      }
+      .total {
+        @include pxRem(padding-left, 5);
+        @include pxRem(font-size, map-get($font-size, md));
+        font-family: $font-family-secondary;
+        font-weight: 600;
+      }
+    }
+  }
+  .logo {
+    @include pxRem(width, 106);
+  }
+  .cart-header {
+    position: relative;
+    .cart-number {
+      @include pxRem(font-size, map-get($font-size, sm));
+      position: absolute;
+      bottom: 9px;
+      right: 7px;
+      font-family: $font-family-secondary;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      color: map-get($color, white);
+      line-height: 20px;
+      font-size: 12px;
+      border-radius: 100%;
+      text-align: center;
+      background: map-get($color, green);
+    }
+  }
+}

@@ -1,0 +1,29 @@
+%clr {
+  &::after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+}
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+%flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+%flex-around {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.flex-between {
+  @extend %flex-between;
+  &::before,
+  &::after {
+    display: none;
+  }
+}

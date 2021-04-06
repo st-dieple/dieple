@@ -1,0 +1,15 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  .nav-item {
+    @include pxRem(margin-left, 30px);
+    border-bottom: solid 2px transparent;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:hover {
+      border-bottom-color: map-get($color, content-text);
+    }
+  }
+}

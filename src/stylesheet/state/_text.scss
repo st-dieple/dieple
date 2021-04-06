@@ -1,0 +1,41 @@
+.txt-prewarp {
+  white-space: pre-wrap;
+}
+.txt-left {
+  text-align: left;
+}
+.txt-right {
+  text-align: right;
+}
+.txt-center {
+  text-align: center
+}
+.no-wrap {
+  white-space: nowrap;
+}
+.txt-bold {
+  font-weight: 700;
+}
+.txt-demi {
+  font-weight: 600;
+}
+.txt-uppercase {
+  text-transform: uppercase;
+}
+.txt-mute {
+  @include pxRem(font-size, map-get($font-size, md));
+  color: map-get($color, gray-text);
+}
+.txt-remove {
+  text-decoration: line-through;
+  font-size: map-get($font-size, sm);
+}
+.txt-highlight {
+  color: map-get($color, red);
+  font-weight: 600;
+}
+.text-number {
+  font-family: $font-family-secondary;
+  font-weight: normal;
+  color: map-get($color, gray-text);
+}
